@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/coins",
+            "lambdaFunction": "crytoapps2181cd72da",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/coins"
+        }
+    ],
+    "resourceName": "api82b7805f",
+    "apiName": "api82b7805f",
+    "functionArns": [
+        {
+            "lambdaFunction": "crytoapps2181cd72da"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-crytoapps21-local-180036-authRole",
+        "unAuthRoleName": "amplify-crytoapps21-local-180036-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "crytoapps2181cd72da",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
