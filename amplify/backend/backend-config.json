@@ -1,0 +1,9 @@
+{
+  "function": {
+    "crytoapps2181cd72da": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  }
+}

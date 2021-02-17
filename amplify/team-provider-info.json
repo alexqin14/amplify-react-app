@@ -1,0 +1,15 @@
+{
+  "local": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-crytoapps21-local-180036-authRole",
+      "UnauthRoleArn": "arn:aws:iam::483472665944:role/amplify-crytoapps21-local-180036-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::483472665944:role/amplify-crytoapps21-local-180036-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-crytoapps21-local-180036-deployment",
+      "UnauthRoleName": "amplify-crytoapps21-local-180036-unauthRole",
+      "StackName": "amplify-crytoapps21-local-180036",
+      "StackId": "arn:aws:cloudformation:us-east-2:483472665944:stack/amplify-crytoapps21-local-180036/2a9dbe90-70b3-11eb-b269-0a720d3caad6",
+      "AmplifyAppId": "d57n98oux7p7e"
+    }
+  }
+}
