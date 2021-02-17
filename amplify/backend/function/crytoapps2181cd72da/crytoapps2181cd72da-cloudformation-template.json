@@ -69,7 +69,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-crytoapps21-local-180036-deployment",
-          "S3Key": "amplify-builds/crytoapps2181cd72da-4a38566256664e466176-build.zip"
+          "S3Key": "amplify-builds/crytoapps2181cd72da-6b556f41422f59646872-build.zip"
         }
       }
     },
