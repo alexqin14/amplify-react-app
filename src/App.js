@@ -19,7 +19,8 @@ const App = () => {
 
   // Define function to all API
   const fetchCoins = async () => {
-    const data = await API.get('api82b7805f', '/coins');
+    const { limit, start } = input
+    const data = await API.get('api82b7805f', `/coins?limit=${limit}&start=${start}`)
     updateCoins(data.coins)
   };
 
@@ -31,6 +32,17 @@ const App = () => {
   , []
   );
   // function takes zero parameter
+
+  // Create additional state to hold user input for limit and start properties
+  const [input, updateInput] = useState({ limit: 5, start: 0 });
+
+// Create a new function to allow users to update the input values
+const updateInputValues = (type, value) => {
+  updateInput({
+     ...input, 
+     [type]: value 
+    });
+};
 
   return (
     <div className="App">
