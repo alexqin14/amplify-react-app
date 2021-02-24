@@ -46,6 +46,26 @@ const updateInputValues = (type, value) => {
 
   return (
     <div className="App">
+
+
+{/* // Add input fields to the UI for user input */}
+<input
+  placeholder="Enter a starting index"
+  onChange={e => updateInputValues('start', e.target.value)}
+/>
+<input
+  onChange={e => updateInputValues('limit', e.target.value)}
+  placeholder="Enter a limit"
+/>
+
+
+{/* // Add button to the UI to give user the option to call the API */}
+  <button 
+    onClick={fetchCoins}
+  >
+    Fetch Coins
+    </button>
+
       {
         coins.map(
           (coin, index) => (
