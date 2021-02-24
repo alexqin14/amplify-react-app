@@ -20,14 +20,38 @@ const App = () => {
 
   // Define function to all API
   const fetchCoins = async () => {
-    updateLoading(true);
+    try { 
+      updateLoading(true);
     const { limit, start } = input
     const data = await API.get('api82b7805f', `/coins?limit=${limit}&start=${start}`)
     updateCoins(data.coins);
     //coins = data.coins;
-    console.log(coins);
+   // console.log(coins);
     updateLoading(false);
+
+    }
+    catch (err) {
+      console.error(err);
+    }
+
+
+    
   };
+   // const fetchCoins = () => {
+  //   updateLoading(true);
+  //   const { limit, start } = input
+  //   API.get('api82b7805f', `/coins?limit=${limit}&start=${start}`)
+  //     .then(response => 
+  //       updateLoading(response.coins)
+        
+  //     )
+  //     .catch(err => console.error(err))
+  //   ;
+   // updateCoins(data.coins);
+
+    //updateLoading(false);
+ // }
+  // Call fetchCoins function when component loads
 
   // Call fetchCoins function when component loads
   useEffect(
