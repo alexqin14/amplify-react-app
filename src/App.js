@@ -20,11 +20,13 @@ const App = () => {
 
   // Define function to all API
   const fetchCoins = async () => {
+    updateLoading(true);
     const { limit, start } = input
     const data = await API.get('api82b7805f', `/coins?limit=${limit}&start=${start}`)
     updateCoins(data.coins);
     //coins = data.coins;
     console.log(coins);
+    updateLoading(false);
   };
 
   // Call fetchCoins function when component loads
@@ -46,6 +48,8 @@ const updateInputValues = (type, value) => {
      [type]: value 
     });
 };
+
+const [loading, updateLoading] = useState(true);
 
   return (
     <div className="App">
@@ -69,7 +73,9 @@ const updateInputValues = (type, value) => {
     Fetch Coins
     </button>
 
-      {
+{loading && <h2>Loading...</h2>}
+
+      { !loading &&
         coins.map(
           (coin, index) => (
             <div 
